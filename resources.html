@@ -18,30 +18,64 @@
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
-        nav {
+
+     nav {
             margin: 20px 0;
             text-align: center;
+          display: flex;
+    justify-content: center;  /* Keep the links centered */
+    flex-wrap: wrap;  /* Allow the links to wrap into multiple lines if needed */
+    gap: 15px;  /* Add some horizontal spacing between the links */
         }
         nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 15px;  /* Maintain horizontal spacing */
+    }
+
+    nav a {
+        padding: 10px 15px;  /* Maintain padding for mobile screens */
+    }
+
+    /* Adjust vertical spacing between rows when the links wrap */
+    nav {
+        row-gap: 10px;  /* Increase the vertical space between the rows */
+    }
+}
+
         .container {
             max-width: 800px;
             margin: 0 auto;
+            text-align: center;
+        }
+        .photo {
+            float: left;
+            margin-right: 20px;
+            max-width: 150px;
+            height: auto;
+            background-color: #ddd;
+        }
+        .description {
             text-align: left;
         }
-        h2 {
+        .news {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .news h2 {
             border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
+            
         }
-        ol {
-            margin-left: 20px;
-        }
-        .container a{
-            text-color: red;
+        .news ul li {
+    margin-bottom: 10px; /* Adjust the value as needed */
         }
     </style>
 </head>

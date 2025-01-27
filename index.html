@@ -19,57 +19,20 @@
             border-bottom: 1px solid #ddd;
         }
 
-        nav {
-    margin: 20px 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;  /* Stack the rows vertically */
-    gap: 10px;  /* Reduced vertical gap between rows */
-}
-
-nav div {
-    display: flex;
-    justify-content: space-between;  /* Distribute links evenly across the row */
-    width: 100%;  /* Ensure the row takes full width */
-}
-
-nav div:first-child {
-    flex-grow: 1;  /* Allow the first row to stretch and take up the available space */
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: inline-block;
-    white-space: nowrap;  /* Ensure text doesn't wrap inside the link */
-}
-
-@media (max-width: 600px) {
-    nav {
-        padding: 0 15px;  /* Keep the nav centered with some horizontal padding */
-    }
-
-    nav div {
-        justify-content: center;  /* Center the links when stacked on small screens */
-    }
-
-    nav div:first-child {
-        flex-wrap: wrap;  /* Allow the first row to wrap when necessary */
-    }
-
-    nav a {
-        font-size: 1rem;  /* Slightly adjust font size for smaller screens */
-    }
-
-    /* Move the "What you can do about climate change" link to the second line */
-    nav div:last-child {
-        display: block;  /* Ensure the second div (bottom row) takes a full line */
-        margin-top: 10px;  /* Add some space between the top and bottom rows */
-    }
-}
-
+     nav {
+            margin: 20px 0;
+            text-align: center;
+          display: flex;
+    justify-content: center;  /* Keep the links centered */
+    flex-wrap: wrap;  /* Allow the links to wrap into multiple lines if needed */
+    gap: 15px;  /* Add some horizontal spacing between the links */
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
         .container {
             max-width: 800px;

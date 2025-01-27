@@ -19,15 +19,31 @@
             border-bottom: 1px solid #ddd;
         }
         nav {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;  /* Add some padding to make the links more clickable */
+    display: inline-block;  /* Ensure the links are inline but allow padding/margins */
+}
+
+@media (max-width: 600px) {
+    nav {
+        text-align: left;  /* Align links to the left for a more standard mobile layout */
+        padding: 0 15px;
+    }
+    
+    nav a {
+        display: block;  /* Stack the links vertically on smaller screens */
+        margin: 10px 0;  /* Vertical spacing between links */
+        padding: 12px;  /* Add more padding to make links easier to tap */
+    }
+}
         .container {
             max-width: 800px;
             margin: 0 auto;

@@ -21,18 +21,23 @@
         nav {
             margin: 20px 0;
             text-align: center;
+            display: flex;
+    justify-content: center;  /* Keep the links centered */
+    flex-wrap: wrap;  /* Allow the links to wrap into multiple lines if needed */
+    gap: 15px;  /* Add some horizontal spacing between the links */
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            padding: 10px 15px;
             display: inline-block; /* Ensures proper spacing */
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            text-align: left; /* Align text to the left */
+            text-align: center; /* Align text to the left */
         }
         img {
             max-width: 100%; /* Make images responsive */

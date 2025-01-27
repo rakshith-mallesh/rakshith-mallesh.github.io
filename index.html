@@ -18,12 +18,13 @@
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
+
         nav {
     margin: 20px 0;
     text-align: center;
     display: flex;
     flex-direction: column;  /* Stack the rows vertically */
-    gap: 10px;  /* Reduce vertical gap between rows */
+    gap: 10px;  /* Reduced vertical gap between rows */
 }
 
 nav div {
@@ -32,12 +33,17 @@ nav div {
     width: 100%;  /* Ensure the row takes full width */
 }
 
+nav div:first-child {
+    flex-grow: 1;  /* Allow the first row to stretch and take up the available space */
+}
+
 nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     padding: 10px 15px;
     display: inline-block;
+    white-space: nowrap;  /* Ensure text doesn't wrap inside the link */
 }
 
 @media (max-width: 600px) {
@@ -46,14 +52,25 @@ nav a {
     }
 
     nav div {
-        justify-content: space-between;
+        justify-content: center;  /* Center the links when stacked on small screens */
+    }
+
+    nav div:first-child {
+        flex-wrap: wrap;  /* Allow the first row to wrap when necessary */
     }
 
     nav a {
-        padding: 10px;
         font-size: 1rem;  /* Slightly adjust font size for smaller screens */
     }
+
+    /* Move the "What you can do about climate change" link to the second line */
+    nav div:last-child {
+        display: block;  /* Ensure the second div (bottom row) takes a full line */
+        margin-top: 10px;  /* Add some space between the top and bottom rows */
+    }
 }
+
+
         .container {
             max-width: 800px;
             margin: 0 auto;
